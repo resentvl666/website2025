@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Hegarty&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: #ededed;
+    background-image: url(https://i.pinimg.com/originals/3e/68/f7/3e68f7c0e8bf0bb1ec2a3a5910126a40.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color:rgb(8, 27, 41);
+    line-height: 1.6;
+    overflow-x:hidden;
+
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    position: relative;
+    font-size: 25px;
+    color: rgb(248, 246, 246);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #161515;
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
+}
+
+.navbar a {
+     color: #b3a9a9;
+    text-decoration: none;
+    font-size: 13px;
+    font-family: 'Poppins',sans-serif;
+    text-transform: uppercase;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #8b83839f;
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover::after,
+.navbar a.active::after {
+    width: 100%;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: rgb(116, 112, 112);
+}
+
+.home {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h1 {
+    position: relative;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: rgb(247, 245, 245);
+}
+
+.home-content h1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #161515;
+    animation: showRight 1s ease forwards;
+    animation-delay: .3s;
+}
+
+.home-content h3 {
+    position: relative;
+    font-size: 30px;
+    font-weight: 700;
+    color: rgb(237, 240, 240);
+}
+
+.home-content h3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #161515;
+    animation: showRight 1s ease forwards;
+    animation-delay: .3s;
+}
+
+.home-content p {
+    position: relative;
+    font-size: 16px;
+    margin: 20px 0 40px;
+    color: rgb(253, 253, 253);
+}
+
+.home-content p::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #e3e8e9;
+    animation: showRight 1s ease forwards;
+    animation-delay: .3s;
+}
+
+.home-content .btn-box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+}
+
+.home-content .btn-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #fdfdfd;
+    animation: showRight 1s ease forwards;
+    animation-delay: .3s;
+    z-index: 2;
+}
+
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background-color: rgb(233, 233, 233);
+    border: 2px solid rgb(247, 250, 250);
+    border-radius: 8px;
+    font-size: 19px;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-box a:hover {
+    color: rgb(224, 224, 224);
+}
+
+.btn-box a:nth-child(2) {
+    background: transparent;
+    color: rgb(0, 0, 0);
+}
+
+.btn-box a:nth-child(2):hover {
+    color: #fdfbfb;
+}
+
+.btn-box a:nth-child(2)::before {
+    background: rgb(8, 8, 8);
+}
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: #0c0c0c;
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+}
+
+.home-sci {
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-sci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid rgb(219, 210, 210);
+    border-radius: 50%;
+    font-size: 20px;
+    color: rgb(59, 65, 65);
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;   
+    transition: .5s;
+}
+
+.home-sci a:hover {
+    color: black;
+}
+
+.home-sci a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: black;
+    z-index: -1;
+    transition: .5s;
+}
+
+.home-sci a:hover::before {
+    width: 100%;
+}
+
+/* FIXED: removed blue border + gray shadow */
+.home-imgHover {
+    position: absolute;
+    top: 0;
+    right: 30px;
+    width: 500px;
+    height: 100%;
+    background: transparent;
+    border: none;
+    transition: .3s;
+}
+
+/*-- Keyframes --*/
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes maniActiveHover {
+    100% {
+        pointer-events: auto;
+    }
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 25px;
+    color: rgb(248, 246, 246);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.logo-img {
+    width: 50px;    /* adjust size */
+    height: 50px;
+    object-fit: cover;
+    border-radius: 8px; /* optional, makes corners rounded */
+}
